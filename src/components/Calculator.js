@@ -1,3 +1,5 @@
+import Button from './Button';
+
 const Calculator = () => {
   const items = [
     {
@@ -100,16 +102,7 @@ const Calculator = () => {
     <>
       <section className="container">
         <span className="display">0</span>
-        {items.map((item) => (
-          <button
-            key={item.id}
-            type="button"
-            className={item.type}
-            id={`item${item.id}`}
-          >
-            {item.text}
-          </button>
-        ))}
+        {items.map((item) => (<Button key={item.id} item={item} />))}
       </section>
     </>
   );

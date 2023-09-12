@@ -125,7 +125,7 @@ npx stylelint "**/*.{css,scss}"
 Track JavaScript linter errors run:
 ```
 npx eslint .
-```
+
 ### Deployment
 
 You can deploy this project using:

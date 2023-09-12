@@ -1,10 +1,9 @@
+import Calculator from './components/Calculator';
+
 function App() {
   return (
     <>
-      <h1>
-        Math Magician Project Set
-      </h1>
-
+      <Calculator />
     </>
   );
 }

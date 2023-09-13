@@ -112,11 +112,7 @@ const Calculator = () => {
       <section className="container">
         <span className="display">{next || total || 0}</span>
         {items.map((item) => (
-          <Button
-            key={item.id}
-            item={item}
-            onKeyClick={handleClick}
-          />
+          <Button key={item.id} item={item} onKeyClick={handleClick} />
         ))}
       </section>
     </>

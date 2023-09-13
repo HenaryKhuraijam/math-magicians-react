@@ -139,7 +139,7 @@ GitHub pages
 
 👤 **Khuraijam Henary Singh**
 
-- GitHub: [@HenaryKhuraijam](https://github.com/HenaryKhuraija)
+- GitHub: [@HenaryKhuraijam](https://github.com/HenaryKhuraijam)
 - Twitter: [@HenaryKhuraijam](https://twitter.com/HenaryKhuraijam)
 - LinkedIn: [Henary Khuraijam](https://www.linkedin.com/in/henary-khuraijam-50487317a)
 

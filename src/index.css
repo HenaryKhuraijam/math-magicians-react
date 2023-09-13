@@ -28,24 +28,27 @@ code {
 
 #root {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
-    "quot quot cal"
+    "quote quote cal"
     "quote quote cal"
     "quote quote cal";
   align-items: center;
+  padding: 2rem;
+  height: 100vh;
 }
 
 .quote-wrapper {
   color: blue;
   grid-area: quote;
-  padding: 5rem;
+  padding: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.status-msg,
 .quote-text {
   font-style: italic;
   font-size: 1.5rem;

@@ -11,27 +11,41 @@ const fetchQuote = async () => {
       'Content-Type': 'application/json',
     },
   });
-  const data = response.json();
+  const data = await response.json();
   return data;
 };
 
 const Quote = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
   const [quotes, setQuote] = useState({});
-  useEffect(() => {
-    fetchQuote().then((res) => {
-      setQuote(res[0]);
-    }).catch(() => {
-      console.log('Error');
-    });
+  const [statusMsg, setStatusMsg] = useState('');
 
-    console.log('UseEffect');
+  useEffect(() => {
+    setIsLoading(true);
+    setStatusMsg('Loading...');
+    fetchQuote()
+      .then((res) => {
+        if (res.error) throw res.error;
+        setQuote(res[0]);
+        setIsLoading(false);
+        setStatusMsg('');
+        return res;
+      })
+      .catch(() => {
+        setStatusMsg('Request Failed!\nSomething went wrong.');
+        setIsError(true);
+      });
   }, []);
-  const { quote, author } = quotes;
   return (
-    <blockquote>
-      <p>{quote}</p>
-      <cite>{author}</cite>
-    </blockquote>
+    <>
+      {(isError || isLoading) ? <p>{statusMsg}</p> : (
+        <blockquote>
+          <p>{quotes.quote}</p>
+          <cite>{quotes.author}</cite>
+        </blockquote>
+      )}
+    </>
   );
 };
 

@@ -1,11 +1,36 @@
+import { useEffect, useState } from 'react';
+
+const QUOTE_API = 'https://api.api-ninjas.com/v1/quotes?category=success';
+const API_KEY = 'RpfsaV7nmDsDUjhBFuoirw==1nbR3TwipCYKqTtC';
+
+const fetchQuote = async () => {
+  const response = await fetch(QUOTE_API, {
+    method: 'GET',
+    headers: {
+      'X-Api-key': API_KEY,
+      'Content-Type': 'application/json',
+    },
+  });
+  const data = response.json();
+  return data;
+};
+
 const Quote = () => {
-  console.log('Hi');
+  const [quotes, setQuote] = useState({});
+  useEffect(() => {
+    fetchQuote().then((res) => {
+      setQuote(res[0]);
+    }).catch(() => {
+      console.log('Error');
+    });
+
+    console.log('UseEffect');
+  }, []);
+  const { quote, author } = quotes;
   return (
     <blockquote>
-      <p>
-        Maths is not only no is the world
-      </p>
-      <cite>- Willian Paul</cite>
+      <p>{quote}</p>
+      <cite>{author}</cite>
     </blockquote>
   );
 };

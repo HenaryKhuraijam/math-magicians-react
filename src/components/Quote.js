@@ -12,6 +12,7 @@ const fetchQuote = async () => {
     },
   });
   const data = await response.json();
+  if (data.error) throw data.error;
   return data;
 };
 
@@ -19,33 +20,29 @@ const Quote = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
   const [quotes, setQuote] = useState({});
-  const [statusMsg, setStatusMsg] = useState('');
 
   useEffect(() => {
     setIsLoading(true);
-    setStatusMsg('Loading...');
     fetchQuote()
       .then((res) => {
-        if (res.error) throw res.error;
         setQuote(res[0]);
         setIsLoading(false);
-        setStatusMsg('');
-        return res;
       })
       .catch(() => {
-        setStatusMsg('Request Failed!\nSomething went wrong.');
         setIsError(true);
       });
   }, []);
+
+  const msg = isError ? 'Request Failed!\nSomething went wrong.' : 'Loading...';
   return (
-    <>
-      {(isError || isLoading) ? <p>{statusMsg}</p> : (
+    <section className="quote-wrapper">
+      {(isError || isLoading) ? <span className="status-msg">{msg}</span> : (
         <blockquote>
-          <p>{quotes.quote}</p>
+          <span className="quote-text">{quotes.quote}</span>
           <cite>{quotes.author}</cite>
         </blockquote>
       )}
-    </>
+    </section>
   );
 };
 

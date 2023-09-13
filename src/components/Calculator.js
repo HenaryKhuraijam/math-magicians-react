@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import Button from './Button';
+import calculate from '../logic/calculate';
 
 const Calculator = () => {
+  const [state, setState] = useState({ total: null, next: null });
   const items = [
     {
       id: 1,
@@ -98,11 +101,23 @@ const Calculator = () => {
       type: 'ops',
     },
   ];
+
+  const { total, next } = state;
+
+  const handleClick = (e) => {
+    setState((state) => calculate(state, e.target.innerText));
+  };
   return (
     <>
       <section className="container">
-        <span className="display">0</span>
-        {items.map((item) => (<Button key={item.id} item={item} />))}
+        <span className="display">{next || total || 0}</span>
+        {items.map((item) => (
+          <Button
+            key={item.id}
+            item={item}
+            onKeyClick={handleClick}
+          />
+        ))}
       </section>
     </>
   );

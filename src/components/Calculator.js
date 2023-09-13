@@ -1,9 +1,9 @@
-import { useEffect } from 'react';
+import { useState } from 'react';
 import Button from './Button';
 import calculate from '../logic/calculate';
 
 const Calculator = () => {
-  const [state, setState] = useEffect({ total: null, next: null });
+  const [state, setState] = useState({ total: null, next: null });
   const items = [
     {
       id: 1,
@@ -115,8 +115,7 @@ const Calculator = () => {
           <Button
             key={item.id}
             item={item}
-            onClick={handleClick}
-            curState={state}
+            onKeyClick={handleClick}
           />
         ))}
       </section>

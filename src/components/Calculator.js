@@ -109,12 +109,16 @@ const Calculator = () => {
   };
   return (
     <>
-      <section className="container">
-        <span className="display">{next || total || 0}</span>
-        {items.map((item) => (
-          <Button key={item.id} item={item} onKeyClick={handleClick} />
-        ))}
-      </section>
+      <main className="calculator row p-5">
+        <h3 className="col-4 text-black mb-3">Let&apos;s do some math!</h3>
+
+        <section className="container m-0 p-0">
+          <span className="display">{next || total || 0}</span>
+          {items.map((item) => (
+            <Button key={item.id} item={item} onKeyClick={handleClick} />
+          ))}
+        </section>
+      </main>
     </>
   );
 };

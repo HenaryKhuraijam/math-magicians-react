@@ -1,26 +1,29 @@
 const Home = () => (
   <>
-    <div className="text-black py-3 px-5">
-      <h4 className="text-black">Home</h4>
+    <div className="discription">
+      <h4 className="text-black">Welcome to my page!</h4>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex rerum, quam
-        nisi repellendus inventore at assumenda eaque distinctio illum nulla
-        sapiente fuga aspernatur consequatur exercitationem, vero rem adipisci
-        odio labore aliquid incidunt? Aspernatur necessitatibus doloremque
-        laborum at sunt enim iure? Nesciunt, molestias. Sequi distinctio odio
-        ipsa soluta accusantium tenetur excepturi alias iusto omnis corrupti,
-        facilis libero beatae pariatur iure? Quam, quas ea! Fugiat, dolore.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium
+        quisquam unde vel explicabo doloribus. Aliquid a accusantium omnis hic
+        voluptate repellat et expedita voluptas cupiditate id optio,
+        exercitationem, maiores temporibus! In maxime eius dolorum et error unde
+        similique, suscipit deserunt nobis id eum iste quia molestias aliquam
+        reiciendis illo, obcaecati qui? Ab adipisci molestias temporibus
+        repellat tempore, beatae velit rem. Nam totam distinctio officia rem?
+        Deserunt deleniti suscipit dolorem harum est natus dolore velit,
+        reiciendis, qui nam id ab! Minima, facilis?
       </p>
 
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-        voluptatum officia consequuntur, enim vel alias modi ipsum repudiandae
-        inventore quisquam molestias voluptas odit ipsa numquam? Voluptatibus
-        totam porro fugiat unde pariatur. Consequatur, expedita distinctio cum
-        doloribus accusamus amet voluptatibus doloremque iure enim tempora
-        explicabo? Nulla ducimus explicabo debitis eveniet ad facere dolorem
-        exercitationem similique quo modi tenetur perspiciatis id quaerat,
-        quidem amet recusandae vero?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium
+        quisquam unde vel explicabo doloribus. Aliquid a accusantium omnis hic
+        voluptate repellat et expedita voluptas cupiditate id optio,
+        exercitationem, maiores temporibus! In maxime eius dolorum et error unde
+        similique, suscipit deserunt nobis id eum iste quia molestias aliquam
+        reiciendis illo, obcaecati qui? Ab adipisci molestias temporibus
+        repellat tempore, beatae velit rem. Nam totam distinctio officia rem?
+        Deserunt deleniti suscipit dolorem harum est natus dolore velit,
+        reiciendis, qui nam id ab! Minima, facilis?
       </p>
     </div>
   </>

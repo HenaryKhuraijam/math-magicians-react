@@ -8,8 +8,8 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(6, 1fr);
-  width: 25rem;
-  height: 30rem;
+  width: 32rem;
+  height: 25rem;
   border: 2px solid black;
 }
 
@@ -40,4 +40,50 @@
 .nums {
   background-color: #e0e0e0;
   border: 1px solid #d3d3d3;
+}
+
+ul {
+  list-style: none;
+}
+
+.mobile {
+  display: flex;
+  margin: 0;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: space-between;
+  width: 100%;
+  padding: 5px;
+  text-align: start;
+}
+
+a {
+  text-decoration: none;
+}
+
+.discription {
+  position: fixed;
+  top: 30%;
+  width: 80%;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+.calculator {
+  width: 200%;
+  box-sizing: border-box;
+  display: flex;
+  margin-top: 90px;
+  justify-content: space-between;
+}
+
+.quote-wrapper {
+  border: 1px solid gray;
+  max-width: 100%; /* Adjust the maximum width of the container if needed */
+  border-radius: 10px;
+  background-color: hsl(236, 7%, 95%);
+  margin-left: 40%;
+  box-shadow: 4px 4px;
 }

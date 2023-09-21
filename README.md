@@ -140,6 +140,11 @@ GitHub pages
 - Twitter: [@HenaryKhuraijam](https://twitter.com/HenaryKhuraijam)
 - LinkedIn: [Henary Khuraijam](https://www.linkedin.com/in/henary-khuraijam-50487317a)
 
+👤 **Abu Talha**
+
+- GitHub: [@Abu Talha](https://github.com/AbuTalha3)
+- Twitter: [@Abu Talha](https://twitter.com/AbuTalha8T)
+
 
 <!-- FUTURE FEATURES -->
 
